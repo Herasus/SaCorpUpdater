@@ -1,0 +1,19 @@
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\Updater.frmMain.resources
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\bin\Debug\Updater.exe
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\bin\Debug\Updater.pdb
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\Updater.exe
+C:\Users\Samuel\AppData\Local\Temporary Projects\Updater\obj\x86\Debug\Updater.pdb
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.exe
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.pdb
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.frmMain.resources
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\bin\Debug\Updater.exe
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\bin\Debug\Updater.pdb
+D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.frmAbout.resources
