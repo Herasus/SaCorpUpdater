@@ -1,6 +1,12 @@
 ﻿using System;
-using System.IO;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
+using System.Threading;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using ICSharpCode.SharpZipLib.Zip;
@@ -36,6 +42,8 @@ namespace Updater
                     {
                         MyFileStream.Write(buffer, 0, count);
                         count = MyZipInputStream.Read(buffer, 0, 4096);
+
+                        Application.DoEvents();
                     }
                     MyFileStream.Close();
                 }

@@ -30,7 +30,7 @@ Ouvrez le fichier update.ini :
 [FILES]
 versions=Le nombre de versions de votre programme
 
-et dans le même dossier, créer une archive .zip avec les fichiers MAJ dedans.
+et dans le même dossier, créer une archive avec le nom "versionX.zip" (où X correspondant au numéro de version) avec les fichiers MAJ dedans.
 
 -----
 

@@ -13,9 +13,11 @@ namespace Updater
 
     public class Download
     {
+        public static int curIndex = 0;
 
-        public static void DownloadFile(string strURL, string strDestination)
+        public static void DownloadFile(string strURL, string strDestination, int index)
         {
+            curIndex = index;
 
             frmMain.isOnRun = true;
             frmMain.srcURL = strURL;
@@ -39,8 +41,7 @@ namespace Updater
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
 
-
-            ChangeTexts(totalBytes, bytesIn, Convert.ToInt32(percentage));
+            ChangeTexts(totalBytes, bytesIn, Convert.ToInt32(percentage), curIndex);
         }
 
         private static void client_DownloadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
@@ -49,9 +50,9 @@ namespace Updater
             frmMain.isOnRun = false;
         }
 
-        private static void ChangeTexts(double length, double position, int percent)
+        private static void ChangeTexts(double length, double position, int percent, int index)
         {
-            ((frmMain)Application.OpenForms["frmMain"]).lblprogress.Text = Math.Round((double)((position / 1024) / 1024), 2) + " MB sur " + Math.Round((double)((length / 1024) / 1024), 2) + "MB (" + percent + "%)";
+            ((frmMain)Application.OpenForms["frmMain"]).lblprogress.Text = "Téléchargement de la version " + index + " - " + Math.Round((double)((position / 1024) / 1024), 2) + " MB sur " + Math.Round((double)((length / 1024) / 1024), 2) + "MB (" + percent + "%)";
             ((frmMain)Application.OpenForms["frmMain"]).ProgressBar1.Value = percent;
         }
     }

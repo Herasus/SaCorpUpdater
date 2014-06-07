@@ -17,3 +17,12 @@ D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\GenerateRe
 D:\Développement\Visual Studio 2010\c#\Updater\Updater\bin\Debug\Updater.exe
 D:\Développement\Visual Studio 2010\c#\Updater\Updater\bin\Debug\Updater.pdb
 D:\Développement\Visual Studio 2010\c#\Updater\Updater\obj\x86\Debug\Updater.frmAbout.resources
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.exe
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.pdb
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\bin\Debug\Updater.exe
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\bin\Debug\Updater.pdb
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.csprojResolveAssemblyReference.cache
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.frmAbout.resources
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.frmMain.resources
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+C:\Users\Samuel\Documents\GitHub\SaCorpUpdater-CSharp\Updater\obj\x86\Debug\Updater.csproj.GenerateResource.Cache

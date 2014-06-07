@@ -9,6 +9,8 @@ namespace Updater
 {
     class Main
     {
+        public static bool isMaj = true;
+
         public static void programMain()
         {
             string file = Application.StartupPath + "\\Config\\Launcher.ini";
@@ -45,13 +47,13 @@ namespace Updater
 
         public static void UpdateProgram()
         {
-            long CurVersion = 0;
-            long verMaj = 0;
+            int CurVersion = 0;
+            int verMaj = 0;
             string Filename = null;
-            long Index = 0;
+            int Index = 0;
 
             AddProgress("Connexion au serveur de " + frmMain.appname + " en cours...");
-            Download.DownloadFile(frmMain.UpdateURL + "/update.ini", Application.StartupPath + "\\tmpUpdate.ini");
+            Download.DownloadFile(frmMain.UpdateURL + "/update.ini", Application.StartupPath + "\\tmpUpdate.ini",0);
             Application.DoEvents();
             AddProgress("Connexion au serveur réussie, en attente d'informations...");
             frmMain.VersionCount = Convert.ToInt32(ReadIni.GetVar(Application.StartupPath + "\\tmpUpdate.ini", "FILES", "versions"));
@@ -71,25 +73,42 @@ namespace Updater
                 verMaj = CurVersion + 1;
                 for (Index = verMaj; Index <= frmMain.VersionCount; Index++)
                 {
+
+                    ((frmMain)Application.OpenForms["frmMain"]).progressNbrVersions.Maximum = (frmMain.VersionCount - CurVersion) * 2;
+                    ((frmMain)Application.OpenForms["frmMain"]).progressNbrVersions.Value = (Index - CurVersion) * 2 - 1;
+
+
                     frmMain.IndexVersionDownload = Index;
                     AddProgress("Téléchargement de la version " + Index + " - ");
                     Filename = "version" + Index + ".zip";
-                    Download.DownloadFile(frmMain.UpdateURL + "/" + Filename, Application.StartupPath + "\\" + Filename);
+                    ((frmMain)Application.OpenForms["frmMain"]).ProgressBar1.Style = ProgressBarStyle.Blocks;
+                    Download.DownloadFile(frmMain.UpdateURL + "/" + Filename, Application.StartupPath + "\\" + Filename, Index);
+                    ((frmMain)Application.OpenForms["frmMain"]).ProgressBar1.Style = ProgressBarStyle.Marquee;
+
+
+
+
+                    ((frmMain)Application.OpenForms["frmMain"]).progressNbrVersions.Value = (Index - CurVersion) * 2;
+
+
                     Application.DoEvents();
                     AddProgress("Extraction de la version " + Index + "...");
+                    Application.DoEvents();
                     Unzip.ExtractArchive(Application.StartupPath + "\\" + Filename, Application.StartupPath + "\\");
                     File.Delete(Application.StartupPath + "\\" + Filename);
                     ReadIni.PutVar(Application.StartupPath + "\\Config\\version.ini", "UPDATER", "CurVersion", Convert.ToString(Index));
+                    ((frmMain)Application.OpenForms["frmMain"]).ProgressBar1.Style = ProgressBarStyle.Blocks;
                     AddProgress("Version " + Index + " installé.");
                     Application.DoEvents();
                 }
-                AddProgress("Les mises à jour sont terminés, vous pouvez dorénavant lancer " + frmMain.appname + ".");
+                AddProgress("Les mises à jour sont terminées, vous pouvez dorénavant lancer " + frmMain.appname + ".");
             }
             else
             {
                 AddProgress("Vous êtes à jour, vous pouvez dorénavant lancer " + frmMain.appname + ".");
             }
             ((frmMain)Application.OpenForms["frmMain"]).cmdLaunch.Enabled = true;
+            isMaj = false;
 
         }
     }

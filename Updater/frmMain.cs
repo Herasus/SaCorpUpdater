@@ -21,7 +21,7 @@ namespace Updater
 
         public static bool isOnRun = true;
 
-        public static long IndexVersionDownload = 0;
+        public static int IndexVersionDownload = 0;
         public static string exename;
         public static string UpdateURL;
         public static string appname;
@@ -54,7 +54,7 @@ namespace Updater
 
         private void cmdQuit_Click(object sender, EventArgs e)
         {
-            if (isOnRun)
+            if (Main.isMaj)
             {
                 if (MessageBox.Show("Une mise à jour est en cours. Voulez-vous vraiment quitter ?", appname, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -94,6 +94,11 @@ namespace Updater
         {
             frm = new frmAbout();
             frm.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
 
